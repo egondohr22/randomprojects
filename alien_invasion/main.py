@@ -5,12 +5,16 @@ from bullet import Bullet
 from settings import Settings
 from ship import Ship
 from alien import Alien
+from time import sleep
+from game_stats import GameStats
+
 class AlienInvasion:
     def __init__(self):
         pygame.init()
         self.settings = Settings()
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
+        self.stats = GameStats(self)
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
@@ -61,6 +65,14 @@ class AlienInvasion:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom < 0:
                 self.bullets.remove(bullet)
+        self._check_bullet_alien_collisions()
+        
+    def _check_bullet_alien_collisions(self):
+        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, False, True)
+        if not self.aliens:
+            self.bullets.empty()
+            self._create_fleet()
+
     
     def _create_fleet(self):
         alien = Alien(self)
@@ -86,6 +98,9 @@ class AlienInvasion:
     
     def _update_aliens(self):
         self.aliens.update()
+        if pygame.sprite.spritecollideany(self.ship, self.aliens):
+            self._ship_hit()
+        self._check_aliens_bottom()
 
     def _check_fleet_edges(self):
         for alien in self.aliens.sprites():
@@ -93,10 +108,25 @@ class AlienInvasion:
                 self._change_fleet_direction()
                 break
     
+    def _check_aliens_bottom(self):
+        screen_rect = self.screen.get_rect()
+        for alien in self.aliens.sprites():
+            if alien.rect.bottom >= screen_rect.bottom:
+                self._ship_hit()
+                break
+
     def _change_fleet_direction(self):
         for alien in self.aliens.sprites():
             alien.rect.y += self.settings.fleet_drop_speed
         self.settings.fleet_direction *= -1
+    
+    def _ship_hit(self):
+        self.stats.ships_left -= 1
+        self.aliens.empty()
+        self.bullets.empty()
+        self._create_fleet()
+        self.ship.center_ship()
+        sleep(0.5)
 
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)

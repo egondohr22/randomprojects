@@ -7,6 +7,7 @@ from ship import Ship
 from alien import Alien
 from time import sleep
 from game_stats import GameStats
+from button import Button
 
 class AlienInvasion:
     def __init__(self):

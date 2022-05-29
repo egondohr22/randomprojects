@@ -1,0 +1,113 @@
+[33mcommit 2f549a1599c57ce8fac07032db430b36f54dda55[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Mon May 23 23:15:23 2022 +0300
+
+    cherno_game -made game class and window -ep4
+
+[33mcommit 8eb2fa2fe2dfebab602645e5e5db0e4a44ed0966[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Mon May 23 19:37:55 2022 +0300
+
+    allien invasion is done but with no details
+
+[33mcommit 8ec6c2ccad79520570648b60a8193bc11e26d05d[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Mon May 23 16:29:35 2022 +0300
+
+    score multiplier
+
+[33mcommit 9ad980e07fbf7ab8e0ac4586b9f096cb4d9bd7cd[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Mon May 23 14:54:49 2022 +0300
+
+    Fixed scoring
+
+[33mcommit 162ae394a5827b7e856900c364ebf811c68cf3e9[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Sat May 21 12:46:49 2022 +0300
+
+    Added score system
+
+[33mcommit 9de3968bd37f7150965b5798ef564a631ec9eecf[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Sat May 21 11:49:26 2022 +0300
+
+    Added the play button
+
+[33mcommit 0ac3457f2af1ed041371048ad6d4932b5b832f9c[m
+Author: egondohr22 <92330663+egondohr22@users.noreply.github.com>
+Date:   Sat May 21 11:26:36 2022 +0300
+
+    Rename details.txt to README.txt
+
+[33mcommit da56a935b62ff75164d83bce55e80e73c0fa1953[m
+Author: egondohr22 <92330663+egondohr22@users.noreply.github.com>
+Date:   Sat May 21 11:26:02 2022 +0300
+
+    Create details.txt
+
+[33mcommit eca92a338496e3cbe1a2b80f6ee16cabf2ec2401[m
+Author: egondohr22 <92330663+egondohr22@users.noreply.github.com>
+Date:   Sat May 21 11:22:49 2022 +0300
+
+    Create README.md
+
+[33mcommit fe3a31e46f4b28c53c1a08e3dda2e110e687e66a[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Thu May 19 18:34:12 2022 +0300
+
+    Made button class
+
+[33mcommit 844db956330bd15dabe64391397464a20cfcf67d[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Thu May 19 08:39:27 2022 +0300
+
+    Game ends on 3 deaths
+
+[33mcommit 4c2d347fdbeb0274095dce0b6acaddeec7e07447[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Wed May 18 15:56:58 2022 +0300
+
+    game restarts when hit or alien reaches bottom
+
+[33mcommit 39f2ba4ba507f1dc97c613425ecd7468e4b8a547[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Tue May 17 20:22:29 2022 +0300
+
+    Fleet moves/detects edges/goes down a row
+
+[33mcommit 2c1fa0d9867acaaec66f4d1104723a6d8b32f834[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Sun May 15 13:19:37 2022 +0300
+
+    cleaned code
+
+[33mcommit b8845a9d13e8874d85682d73c0597c01c4c0cf41[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Sun May 15 13:15:07 2022 +0300
+
+    made fleet move
+
+[33mcommit 41329696f8304ad6c3c837468d42c3fc33157e81[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Fri May 13 23:11:35 2022 +0300
+
+    made alien
+
+[33mcommit b1e2e5cf579479b26cf3d703a83570859302b627[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Fri May 13 12:45:48 2022 +0300
+
+    Fire bullets
+
+[33mcommit 5c5d6c74ad0d2202d37d86c962ffbc12b03b1906[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Fri May 13 08:24:08 2022 +0300
+
+    Done with first part
+
+[33mcommit fb6ebd6ef60e7715898698202359e61c609d657c[m
+Author: Egon Dohr <egondohr03@gmail.com>
+Date:   Thu May 12 19:40:42 2022 +0300
+
+    Made movement

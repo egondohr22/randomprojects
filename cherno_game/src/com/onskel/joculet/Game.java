@@ -11,6 +11,7 @@ import java.awt.image.DataBufferInt;
 import javax.swing.JFrame;
 
 import com.onskel.joculet.graphics.Screen;
+import com.onskel.joculet.input.Keyboard;
 
 public class Game extends Canvas implements Runnable{
     private static final long serialVersionUID = 1L; //idk what's this
@@ -21,8 +22,9 @@ public class Game extends Canvas implements Runnable{
 
     private Thread thread;
     private JFrame frame;
+    private Keyboard key;
     private boolean running = false;
-
+    
     private Screen screen;
 
     private BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -33,8 +35,10 @@ public class Game extends Canvas implements Runnable{
         setPreferredSize(size);
 
         screen = new Screen(width, height);
-
         frame = new JFrame();
+        key = new Keyboard();
+        
+        addKeyListener(key);
     }
 
     public synchronized void start() {
@@ -81,6 +85,7 @@ public class Game extends Canvas implements Runnable{
     }
     int x = 0, y = 0;
     public void update() {
+        key.update();
         x++;
         y++;
     }

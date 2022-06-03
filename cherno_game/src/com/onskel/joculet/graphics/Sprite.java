@@ -4,11 +4,12 @@ import javax.print.attribute.standard.Sides;
 
 public class Sprite {
     
-    private final int SIZE;
+    public final int SIZE;
     private int x, y;
     private SpriteSheet sheet;
     public int[] pixels;
 
+    public static Sprite grass = new Sprite(16, 0, 0, SpriteSheet.tiles);
 
     public Sprite(int size, int x, int y, SpriteSheet sheet) {
         SIZE = size;

@@ -4,12 +4,12 @@ import com.onskel.joculet.graphics.Screen;
 
 public class Level {
     
-    private int width, height;
-    private int[] tiles;
+    protected int width, height;
+    protected int[] tiles;
 
     public Level(int width, int height) {
         this.width = width;
-        this.height =height;
+        this.height = height;
         tiles = new int[width*height];
         generateLevel();
     }
@@ -18,7 +18,7 @@ public class Level {
         loadLevel(path);
     }
 
-    private void generateLevel() {
+    protected void generateLevel() {
 
     }
 

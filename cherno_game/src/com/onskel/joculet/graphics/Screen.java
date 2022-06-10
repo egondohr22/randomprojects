@@ -2,6 +2,8 @@ package com.onskel.joculet.graphics;
 
 import java.util.Random;
 
+import com.onskel.joculet.level.tile.Tile;
+
 public class Screen {
     
     private int width, height;
@@ -37,6 +39,12 @@ public class Screen {
                 if(xx < 0 || xx >= width) continue;
                 pixels[xx+yy*width] = Sprite.grass.pixels[(x&15) + (y&15)*Sprite.grass.SIZE];
             }
+        }
+    }
+
+    public void renderTile(int xp, int yp, Tile tile) {
+        for(int y = 0; y < tile.sprite.SIZE; y++) {
+            int ya = y + yp;
         }
     }
 }

@@ -1,5 +1,7 @@
 package com.onskel.joculet.level;
 
+import javax.net.ssl.SSLContext;
+
 import com.onskel.joculet.graphics.Screen;
 
 public class Level {
@@ -34,6 +36,9 @@ public class Level {
 
     }
     public void render(int xScroll, int yScroll, Screen screen) {
-
+        int x0 = xScroll >> 4;
+        int x1 = (xScroll + screen.width) >> 4;
+        int y0 = yScroll >> 4;
+        int y1 = (yScroll + screen.height) >> 4;
     }
 }

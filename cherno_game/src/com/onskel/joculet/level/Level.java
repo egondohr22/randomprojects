@@ -1,8 +1,7 @@
 package com.onskel.joculet.level;
 
-import javax.net.ssl.SSLContext;
-
 import com.onskel.joculet.graphics.Screen;
+import com.onskel.joculet.level.tile.Tile;
 
 public class Level {
     
@@ -40,5 +39,10 @@ public class Level {
         int x1 = (xScroll + screen.width) >> 4;
         int y0 = yScroll >> 4;
         int y1 = (yScroll + screen.height) >> 4;
+    }
+
+    public Tile getTile(int x, int y) {
+        if (tiles[x+y*width] == 0) return Tile.grass;
+        return null;
     }
 }
